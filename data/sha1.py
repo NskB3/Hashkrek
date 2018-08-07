@@ -3,6 +3,7 @@ import itertools
 import sys
 import hsh
 hash = hsh.hash
+i = 0
 def dictionary():
         wlist = input("Wordlist: ")
         try:
@@ -62,12 +63,13 @@ Special characters)
                  print("\nHash Cracked:",frsttt)
                  quit()
                 else:
+                 i += 1
                  frst = ''.join(i).replace(',', 
 '')
                  frstt = frst.replace('(', '')
                  frsttt = frstt.replace(')', 
 '')
-                 sys.stdout.write("\rTested %s " % frsttt)
+                 sys.stdout.write("\rTested %s " % str(i))
                  sys.stdout.flush()
 
 print("""
