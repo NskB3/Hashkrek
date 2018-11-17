@@ -3,7 +3,6 @@ import itertools
 import sys
 import hsh
 hash = hsh.hash
-i = 0
 def dictionary():
         wlist = input("Wordlist: ")
         try:
@@ -49,6 +48,7 @@ Special characters)
     else:
         print("Not a valid option. Setting charset to Alpha Numeric")
         charset = CHARSET_ALPHANUMERIC
+    f = 0
     minimum = int(input("Minimum length: "))
     for length in range(minimum, 9999):
             gen = itertools.product(charset, repeat=length)
@@ -63,7 +63,7 @@ Special characters)
                  print("\nHash Cracked:",frsttt)
                  quit()
                 else:
-                 i += 1 
+                 f += 1 
                  frst = ''.join(i).replace(',', 
 '')
                  frstt = frst.replace('(', '')
